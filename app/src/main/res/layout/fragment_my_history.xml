@@ -1,0 +1,53 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Fragment.MyHistoryFragment">
+
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePickerButton"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Date"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/logsTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Logs"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textContainer"
+        android:paddingTop="8dp" />
+
+</RelativeLayout>

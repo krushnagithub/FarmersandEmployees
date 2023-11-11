@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.farmersandemployees.Fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.farmersandemployees.Fragment.LoginFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_signInFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+<fragment
+    android:id="@+id/HomeFragment"
+    android:name="com.example.farmersandemployees.Fragment.HomeFragment"
+    android:label="fragment_home"
+    tools:layout="@layout/fragment_home">
+
+    <action
+        android:id="@+id/action_HomeFragment_to_OpenDrawer"
+        app:destination="@id/HomeFragment"/>
+
+
+</fragment>
+
+    <fragment
+        android:id="@+id/MyHistoryFragment"
+        android:name="com.example.farmersandemployees.Fragment.MyHistoryFragment"
+        android:label="fragment_my_history"
+        tools:layout="@layout/fragment_my_history" />
+
+    <fragment
+        android:id="@+id/VisitorLogsFragment"
+        android:name="com.example.farmersandemployees.Fragment.VisitorLogsFragment"
+        android:label="fragment_visitor_logs"
+        tools:layout="@layout/fragment_visitor_logs" />
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.example.farmersandemployees.Fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_SettingsFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+
+
+</navigation>

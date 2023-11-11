@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/MyHistoryFragment"
+        android:title="My History" />
+    <item
+        android:id="@+id/VisitorLogsFragment"
+        android:title="Visitor Logs" />
+    <item
+        android:id="@+id/SettingsFragment"
+        android:title="Settings"
+        android:orderInCategory="100" />
+</menu>
